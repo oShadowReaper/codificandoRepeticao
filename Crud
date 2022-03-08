@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="button.css">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="modal.css">
+    <link rel="stylesheet" href="record.css">
+    <script src="crud.js"></script>
+    <link rel="shortcut icon" href="pngwing.com.png" type="image/x-icon">
+    <title>CRUD</title>
+</head>
+
+<body>
+    <header>
+        <h1 class="header-title">Cadastro de peças</h1>
+        <a href="home.html"><img src="pacman_PNG16.png" class="image" title="Página Inicial"></a>
+    </header>
+    <main>
+        <button type="button" class="button blue mobile" id="cadastrarPeças">Cadastrar peças</button>
+        <table id="tabelaPeças" class="records">
+            <thead>
+                <tr>
+                    <th>Nome da peça</th> <!--  Nome -->
+                    <th>Tipo de Pc</th> <!--  E-mail -->
+                    <th>Preço médio</th> <!--  Numero -->
+                    <th>Modelo da peça</th> <!--  Cidade -->
+                    <th>Ação</th>
+                </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
+        <div class="modal" id="modal">
+            <div class="modal-content">
+                <header class="modal-header">
+                    <h2>Nova Peça</h2>
+                    <span class="modal-fechar" id="modalFechar">&#10006;</span>
+                </header>
+                <form id="forma" class="modal-forma">
+                    <input type="text" id="peça" data-index="new" class="modal-campo" placeholder="Nome da Peça"
+                        required>
+                    <input type="text" id="tipo" class="modal-campo" placeholder="Tipo de Pc" required>
+                    <input type="text" id="preço" class="modal-campo" placeholder="Preço Médio" required>
+                    <input type="text" id="modelo" class="modal-campo" placeholder="Modelo da Peça" required>
+                </form>
+                <footer class="modal-footer">
+                    <button id="salvar" class="button green">Salvar</button>
+                    <button id="cancelar" class="button red">Cancelar</button>
+                </footer>
+            </div>
+        </div>
+    </main>
+
+</body>
+
+</html>
