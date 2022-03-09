@@ -7,8 +7,8 @@ const fecharModal = () => {
 }
 
 
-const getLocalStorage = () => JSON.parse(localStorage.getItem('db_peça')) ?? []
-const setLocalStorage = (dbpeça) => localStorage.setItem("db_peça", JSON.stringify(dbpeça))
+const getLocalStorage = () => JSON.parse(localStorage.getItem('bd_peça')) ?? []
+const setLocalStorage = (dbpeça) => localStorage.setItem("bd_peça", JSON.stringify(dbpeça))
 
 // CRUD - create read update delete
 const deletarPeça = (index) => {
@@ -23,7 +23,7 @@ const updatePeça = (index, peça) => {
     setLocalStorage(dbpeça)
 }
 
-const lerPeça = () => getLocalStorage('db_peça')
+const lerPeça = () => getLocalStorage('bd_peça')
 
 const criarPeça = (peça) => {
     const dbpeça = getLocalStorage()
