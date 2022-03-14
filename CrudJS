@@ -44,7 +44,6 @@ const limparCampos = () => {
 }
 
 const salvarPeça = () => {
-    debugger
     if (isValidCampos()) {
         const peça = {
             peça: document.getElementById('peça').value,
