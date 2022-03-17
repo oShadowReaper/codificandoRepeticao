@@ -1,3 +1,5 @@
+let arraia = JSON.parse(localStorage.getItem("bd_peça"))
+
 const abrirModal = () => document.getElementById('modal')
     .classList.add('active')
 
@@ -5,7 +7,6 @@ const fecharModal = () => {
     limparCampos()
     document.getElementById('modal').classList.remove('active')
 }
-
 
 const getLocalStorage = () => JSON.parse(localStorage.getItem('bd_peça')) ?? []
 const setLocalStorage = (dbpeça) => localStorage.setItem("bd_peça", JSON.stringify(dbpeça))
@@ -142,3 +143,23 @@ document.querySelector('#tabelaPeças>tbody')
 document.getElementById('cancelar')
     .addEventListener('click', fecharModal)
 
+
+// Tabela 
+for(let i = 0; i < arraia.length; i++){
+    const tr = TabelaJogos.insertRow();
+    for(let j = 0; j < 4; j++){
+        const td = tr.insertCell();
+        if(j === 0){
+            td.appendChild(document.createTextNode(arraia[i].peça));
+        }
+        if(j === 1){
+            td.appendChild(document.createTextNode(arraia[i].tipo));
+        } 
+        if(j === 2){
+            td.appendChild(document.createTextNode(arraia[i].preço));
+        }
+        if(j === 3){
+            td.appendChild(document.createTextNode(arraia[i].modelo));
+        }
+    }
+}   
