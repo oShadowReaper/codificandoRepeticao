@@ -5,7 +5,7 @@
 }
 
 :root{
-    --primary-color: #2c66bd;
+    --primary-color: #06255e;
     --secundary-color:#5abda4;
     --shadow-color: #5f6061;
     --text-color: #FFF;
@@ -17,7 +17,7 @@ body{
     flex-direction: column;
     font-family: 'karla', sans-serif;
     position:relative;
-    background-color: rgb(177, 172, 172);
+    background-color: #0f4596;
     font-size: 80%;
 }
 
@@ -57,7 +57,7 @@ main{
     padding: 50px;
     box-shadow: 2px 2px 10px var(--shadow-color);
     gap: 20px;
-    background-color: #CCC
+    background-color: #3769b6;
 }
 
 footer{
