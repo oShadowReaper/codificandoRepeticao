@@ -6,7 +6,7 @@
 
 :root{
     --primary-color: #06255e;
-    --secundary-color:#5abda4;
+    --secundary-color:#bd5a5a;
     --shadow-color: #5f6061;
     --text-color: #FFF;
 }
@@ -266,7 +266,7 @@ button.red{
     background-color: var(--secundary-color);
 }
 
-@media screen and  (max-width:480px){
+@media screen and  (max-width:480px) and (min-width:375px){
     .records{
         border-spacing: 5px;
         margin-top: 50px;
@@ -326,4 +326,7 @@ button.red{
 margin-left: 35%;
 
     }
+}
+
+@media screen and  (max-width:375px){
 }
