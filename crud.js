@@ -27,7 +27,7 @@ const updatePeça = (index, peça) => {
 const lerPeça = () => getLocalStorage('bd_peça')
 
 const criarPeça = (peça) => {
-    const dbpeça = getLocalStorage()
+    const dbpeça = getLocalStorage("bd_peça")
     dbpeça.push (peça)
     setLocalStorage(dbpeça)
 }
@@ -128,25 +128,21 @@ const editarDelete = (event) => {
 updateTabela()
 
 // Eventos
-document.getElementById('cadastrarPeças')
-    .addEventListener('click', abrirModal)
+document.getElementById('cadastrarPeças').addEventListener('click', abrirModal)
 
-document.getElementById('modalFechar')
-    .addEventListener('click', fecharModal)
+document.getElementById('modalFechar').addEventListener('click', fecharModal)
 
-document.getElementById('salvar')
-    .addEventListener('click', salvarPeça)
+document.getElementById('salvar').addEventListener('click', salvarPeça)
 
-document.querySelector('#tabelaPeças>tbody')
-    .addEventListener('click', editarDelete)
+document.querySelector('#tabelaPeças>tbody').addEventListener('click', editarDelete)
 
-document.getElementById('cancelar')
-    .addEventListener('click', fecharModal)
+document.getElementById('cancelar').addEventListener('click', fecharModal)
 
 
 // Tabela 
+function tabela(){
 for(let i = 0; i < arraia.length; i++){
-    const tr = TabelaJogos.insertRow();
+    const tr = prateleira.insertRow();
     for(let j = 0; j < 4; j++){
         const td = tr.insertCell();
         if(j === 0){
@@ -163,3 +159,4 @@ for(let i = 0; i < arraia.length; i++){
         }
     }
 }   
+}
