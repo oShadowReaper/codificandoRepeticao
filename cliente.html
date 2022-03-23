@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../Pasta da SA/cliente.css">
+    <link rel="shortcut icon" href="../Pasta da SA/codificandoRepeticao/pngwing.com.png" type="image/x-icon">
+    <script src="../Pasta da SA/cliente.js" defer></script>
+    <title>Gerenciamento de contas</title>
+</head>
+
+<body>
+    <header>
+        <h1 class="header-title">Gerenciamento de Contas</h1>
+        <a href="./home.html"><img src="../Pasta da SA/codificandoRepeticao/pacman_PNG16.png" class="image" title="Página Inicial"></a>
+    </header>
+    <main>
+        <button type="button" class="button blue mobile" id="cadastrarCliente">Cadastrar Cliente</button>
+        <table id="tabelaCliente" class="records">
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>E-mail</th>
+                    <th>Senha</th>
+                    <th>Ação</th>
+                </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
+        <div class="modal" id="modal">
+            <div class="modal-content">
+                <header class="modal-header">
+                    <h2>Novo Cliente</h2>
+                    <span class="modal-close" id="modalClose">&#10006;</span>
+                </header>
+                <form id="form" class="modal-form">
+                    <input type="text" id="nome" data-index="new" class="modal-field" placeholder="Nome do Cliente"
+                        required>
+                    <input type="email" id="email" class="modal-field" placeholder="e-mail do Cliente" required>
+                    <input type="password" id="senha" class="modal-field" placeholder="Senha do Cliente" required>
+                    
+                </form>
+                <footer class="modal-footer">
+                    <button id="salvar" class="button green">Salvar</button>
+                    <button id="cancelar" class="button blue">Cancelar</button>
+                </footer>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>
